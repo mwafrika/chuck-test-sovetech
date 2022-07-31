@@ -55,3 +55,5 @@ const STYLES = StyleSheet.create({
         elevation: 0
     },
 });
+
+export default Buttons;
