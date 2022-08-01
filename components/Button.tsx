@@ -1,4 +1,5 @@
-import React,{useMemo} from "react";
+import {useMemo} from "react";
+import * as React from 'react';
 import { StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 

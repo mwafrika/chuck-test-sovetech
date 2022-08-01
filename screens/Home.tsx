@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import {useState,useEffect}  from 'react';
 import {
     Alert,
     ActivityIndicator,
@@ -6,11 +7,12 @@ import {
     StyleSheet,
     View,
     Text,
+    SafeAreaView
 } from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
-import LinearGradient from 'react-native-linear-gradient';
+import {LinearGradient} from 'expo-linear-gradient';
 
 import Repository from '../api/resources';
 import Categories from '../components/Categories';
@@ -95,6 +97,7 @@ const renderContent = () => {
 
 
 return (
+    <SafeAreaView style={{ flex: 1 }}>
     <LinearGradient
         colors={['#383e4b', '#3d434f', '#383e4b']}
         style={STYLES.container}>
@@ -105,7 +108,7 @@ return (
         onSelectCategory={onSelectCategory} 
         main={false}  />
     <View style={STYLES.content}>
-        {renderContent}
+        {renderContent()}
     </View>
     <View style={STYLES.buttons}>
         <Button
@@ -122,6 +125,7 @@ return (
                 onPress={() => onClickShare()} main={false} />
     </View>
 </LinearGradient>
+</SafeAreaView>
 )
 }
 

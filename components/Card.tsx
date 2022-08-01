@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     StyleSheet,
     View,
@@ -9,7 +9,7 @@ export type Props ={
     text: string;
 }
 
-export const FactCard = (props: Props) => {
+const Card = (props: Props) => {
     return (
         <View style={STYLES.card}>
             <Text style={STYLES.text}>
@@ -35,3 +35,5 @@ const STYLES = StyleSheet.create({
         fontSize: 18,
     },
 });
+
+export default Card;

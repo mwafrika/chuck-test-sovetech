@@ -1,11 +1,10 @@
+import * as React from 'react';
 import { StyleSheet, FlatList } from "react-native";
 import Category from "./Category";
-import { CATEGORIES } from "../api/Constants";
-import React from 'react';
+import { CATEGORIES } from "../api/constants";
 
 
 export type Props = {
-    // onPress: (category: string) => void;
     main: boolean;
     onSelectCategory: (category: string) => void;
     selected: string;

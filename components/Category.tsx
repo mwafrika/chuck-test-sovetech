@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 import { Dimensions, StyleSheet, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 
