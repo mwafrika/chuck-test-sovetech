@@ -5,7 +5,7 @@ import React from 'react';
 
 
 export type Props = {
-    onPress: (category: string) => void;
+    // onPress: (category: string) => void;
     main: boolean;
     onSelectCategory: (category: string) => void;
     selected: string;

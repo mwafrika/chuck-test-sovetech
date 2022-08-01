@@ -7,6 +7,7 @@ export type Props = {
     onPress: () => void;
     icon: string;
     main: boolean;
+
 }
 
 const Buttons: React.FC<Props>=(({ onPress, icon, main }) => {
