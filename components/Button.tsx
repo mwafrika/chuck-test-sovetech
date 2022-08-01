@@ -1,4 +1,4 @@
-import {useMemo} from "react";
+import { useMemo } from "react";
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
@@ -11,11 +11,11 @@ export type Props = {
 
 }
 
-const Buttons: React.FC<Props>=(({ onPress, icon, main }) => {
+const Buttons: React.FC<Props> = (({ onPress, icon, main }) => {
     let size = 40;
     const styles = useMemo(() => {
         let styles = [STYLES.button];
-       
+
         if (main) {
             styles.push(STYLES.buttonMain);
             size = 50;
@@ -51,10 +51,10 @@ const STYLES = StyleSheet.create({
     buttonMain: {
         padding: 30,
         borderRadius: 60,
-        aspectRatio: 0,
+        aspectRatio: 1,
         justifyContent: 'center',
-        backgroundColor: '',
-        elevation: 0
+        backgroundColor: '#20232c',
+        elevation: 10
     },
 });
 

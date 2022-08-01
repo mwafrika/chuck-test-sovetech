@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet, View, TouchableOpacity } from "react-native";
+import { Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
+import styled from 'styled-components';
 
 const { width } = Dimensions.get('window');
-const itemWidth = width / 5;
+
 export type Props = {
     onPress: () => void;
     icon: string;
@@ -11,7 +12,7 @@ export type Props = {
     id: string;
 }
 
-const Category: React.FC<Props>= ({ onPress, icon, selected, id }) => {
+const Category: React.FC<Props> = ({ onPress, icon, selected, id }) => {
 
     let styles = [STYLES.icon];
     if (selected) {
@@ -19,26 +20,24 @@ const Category: React.FC<Props>= ({ onPress, icon, selected, id }) => {
     }
 
     return (
-        // width={itemWidth}
-        <View style={STYLES.item}>
-            <TouchableOpacity onPress={onPress}>
-                <Icon
-                    name={icon}
-                    style={styles}
-                    size={20}
-                />
-            </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={onPress}>
+            <CardContainer>
+                <CategoryIcon>
+                    <Icon
+                        name={icon}
+                        style={styles}
+                        size={20}
+                    />
+                </CategoryIcon>
+            </CardContainer>
+        </TouchableOpacity>
+
     );
 }
 
 export default Category;
 
 const STYLES = StyleSheet.create({
-    item: {
-        flex: 1,
-        alignItems: 'center'
-    },
     icon: {
         paddingTop: 40,
         paddingBottom: 20,
@@ -57,3 +56,13 @@ const STYLES = StyleSheet.create({
         paddingRight: 10,
     },
 });
+
+const CategoryIcon = styled.view`
+    flex: 1;
+    align-items: center;
+    width: ${width / 5}px;
+`
+const CardContainer = styled.view`
+    flex: 1;
+    align-items: center;
+    `;

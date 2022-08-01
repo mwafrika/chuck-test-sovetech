@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import Category from "./Category";
 import { CATEGORIES } from "../api/constants";
 
@@ -9,18 +9,18 @@ export type Props = {
     onSelectCategory: (category: string) => void;
     selected: string;
 }
-const Categories: React.FC<Props>=({ onSelectCategory, selected }) => {
-   
+const Categories: React.FC<Props> = ({ onSelectCategory, selected }) => {
+
     return (
         <FlatList
             data={CATEGORIES}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
                 <Category
-                  id={item.id}
-                  icon={item.icon}
-                  selected={item.id == selected}
-                  onPress={() => onSelectCategory(item.id)}
+                    id={item.id}
+                    icon={item.icon}
+                    selected={item.id == selected}
+                    onPress={() => onSelectCategory(item.id)}
                 />
             )}
             horizontal={true}
@@ -29,14 +29,5 @@ const Categories: React.FC<Props>=({ onSelectCategory, selected }) => {
 }
 
 export default Categories;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
 
 

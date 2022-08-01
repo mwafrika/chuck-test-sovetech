@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import  HomeScreen from './screens/Home';
-import  SearchScreen from './screens/Search';
+import HomeScreen from './screens/Home';
+import SearchScreen from './screens/Search';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -19,7 +19,7 @@ const Stack = () => {
   );
 }
 
-const App = () =>{
+const App = () => {
   return (
     <NavigationContainer>
       <Stack />

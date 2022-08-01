@@ -1,39 +1,31 @@
 import * as React from 'react';
-import {
-    StyleSheet,
-    View,
-    Text
-} from 'react-native';
-
-export type Props ={
+import styled from 'styled-components';
+import { Text } from 'react-native';
+export type Props = {
     text: string;
 }
 
 const Card = (props: Props) => {
     return (
-        <View style={STYLES.card}>
-            <Text style={STYLES.text}>
+        <Cards>
+            <Text>
                 {props.text}
             </Text>
-        </View>
+        </Cards>
     );
 }
 
-
-const STYLES = StyleSheet.create({
-    card: {
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 20,
-        padding: 20,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        elevation: 4,
-    },
-    text: {
-        color: '#000',
-        fontSize: 18,
-    },
-});
-
 export default Card;
+
+const Cards = styled.view`
+margin: 20px;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+elevation: 4;
+`
+
+const Texts = styled.text`
+color: #000;
+font-size: 18px;
+`;
