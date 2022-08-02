@@ -77,6 +77,9 @@
 <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"/>
 <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/>
 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+<img src="https://img.shields.io/badge/react-native-%2320232a.svg?style=for-the-badge&logo=react-native&logoColor=%2361DAFB"/>
+<img src="https://img.shields.io/badge/react-navigation-%2361DAFB.svg?style=for-the-badge&logo=react-navigation&logoColor=white"/>
+<img src="https://img.shields.io/badge/styled-%2338B2AC.svg?style=for-the-badge&logo=styled-components&logoColor=white"/>
 <br></br>
 </ul>
 
