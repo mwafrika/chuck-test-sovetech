@@ -1,9 +1,9 @@
 <div id="top" align="center">
-  <a href="https://github.com/mwafrika/final_capstone_backend">
-    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/mwafrika/final_capstone_backend/develop?color=blue&style=flat-square">
+  <a href="https://github.com/mwafrika/chuck-test-sovetech">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/mwafrika/chuck-test-sovetech/master?color=blue&style=flat-square">
   </a>
-  <a href="https://github.com/mwafrika/final_capstone_backend">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mwafrika/final_capstone_backend?color=green&label=%E2%98%85%20stars%20&style=flat-square">
+  <a href="https://github.com/mwafrika/chuck-test-sovetech">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mwafrika/chuck-test-sovetech?color=green&label=%E2%98%85%20stars%20&style=flat-square">
   </a>
   <a href="https://github.com/mwafrika">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/mwafrika?color=yellow&logo=github&style=flat-square">
@@ -21,7 +21,7 @@
     <a href="#"><strong>Explore the App »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/mwafrika/">View Demo</a>
+    <a href="https://res.cloudinary.com/ujuzi/video/upload/v1659475337/videos/XRecorder_Edited_02082022_225850_r5ujnr.mp4">View Demo</a>
     ·
     <a href="https://github.com/mwafrika/chuck-test-sovetech.git">Report Bug</a>
     ·
