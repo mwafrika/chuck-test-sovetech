@@ -66,9 +66,9 @@
 
 ### Sneak peak
 <ul style="display: flex; gap:6px; justify-content: center; width: 100%">
-<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-234919_jhtvnr.jpg" width="280">
-<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477907/images/Screenshot_20220802-235036_cumf1k.jpg" width="280">
-<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-235013_u8fvog.jpg" width="280">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-234919_jhtvnr.jpg" width="250">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477907/images/Screenshot_20220802-235036_cumf1k.jpg" width="250">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-235013_u8fvog.jpg" width="250">
 </ul>
 <p align="right"><a href="#top">⬆️</a></p>
 
