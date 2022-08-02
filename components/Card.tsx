@@ -1,6 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { Text } from 'react-native';
+import styled from 'styled-components/native';
 export type Props = {
     text: string;
 }
@@ -17,7 +16,7 @@ const Card = (props: Props) => {
 
 export default Card;
 
-const Cards = styled.view`
+const Cards = styled.View`
 margin: 20px;
 padding: 20px;
 background-color: #fff;
@@ -25,7 +24,7 @@ border-radius: 10px;
 elevation: 4;
 `
 
-const Texts = styled.text`
+const Text = styled.Text`
 color: #000;
 font-size: 18px;
 `;

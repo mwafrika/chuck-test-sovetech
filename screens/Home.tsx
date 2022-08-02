@@ -9,7 +9,7 @@ import {
     Text,
     SafeAreaView
 } from 'react-native';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -32,6 +32,7 @@ const HomeScreen = () => {
 
     useEffect(() => {
         loadFact();
+        console.log(categorie, "checke categories")
     }, [categorie]);
 
     const loadFact = () => {
@@ -173,6 +174,7 @@ const STYLES = StyleSheet.create({
 
 
 
-const Categoris = styled.view`
+const Categoris = styled.View`
     flex: 1;
+    padding-top: 50px;
     `;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 const { width } = Dimensions.get('window');
 
@@ -18,6 +18,7 @@ const Category: React.FC<Props> = ({ onPress, icon, selected, id }) => {
     if (selected) {
         styles.push(STYLES.selected);
     }
+
 
     return (
         <TouchableOpacity onPress={onPress}>
@@ -39,30 +40,29 @@ export default Category;
 
 const STYLES = StyleSheet.create({
     icon: {
-        paddingTop: 40,
+        paddingTop: 10,
         paddingBottom: 20,
         paddingLeft: 20,
         paddingRight: 20,
         color: '#999',
     },
     selected: {
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
         color: '#fff',
         backgroundColor: '#aaaaaaaa',
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 10,
-        paddingRight: 10,
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 50
     },
 });
 
-const CategoryIcon = styled.view`
+const CategoryIcon = styled.View`
     flex: 1;
     align-items: center;
     width: ${width / 5}px;
-`
-const CardContainer = styled.view`
+`;
+const CardContainer = styled.View`
     flex: 1;
     align-items: center;
     `;

@@ -12,20 +12,19 @@ export type Props = {
 const Categories: React.FC<Props> = ({ onSelectCategory, selected }) => {
 
     return (
-        <View>
-            <FlatList
-                data={CATEGORIES}
-                keyExtractor={(item) => item.id}
-                renderItem={({ item }) => (
-                    <Category
-                        id={item.id}
-                        icon={item.icon}
-                        selected={item.id == selected}
-                        onPress={() => onSelectCategory(item.id)} />
-                )}
-                horizontal={true}
-            />
-        </View>
+        <FlatList
+            data={CATEGORIES}
+            keyExtractor={(item) => item.id}
+            style={{ flex: 1 }}
+            renderItem={({ item }) => (
+                <Category
+                    id={item.id}
+                    icon={item.icon}
+                    selected={item.id == selected}
+                    onPress={() => onSelectCategory(item.id)} />
+            )}
+            horizontal={true}
+        />
     );
 }
 
