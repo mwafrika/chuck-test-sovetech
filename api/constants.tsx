@@ -4,7 +4,7 @@ export const CATEGORIES = [
     { id: 'random', icon: 'home' },
     { id: 'dev', icon: 'code' },
     { id: 'celebrity', icon: 'tv' },
-    { id: 'food', icon: 'target' }, 
+    { id: 'food', icon: 'target' },
     { id: 'science', icon: 'compass' },
     { id: 'sport', icon: 'disc' },
     { id: 'political', icon: 'mic' },

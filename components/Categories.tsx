@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FlatList } from "react-native";
+import { FlatList, View } from "react-native";
 import Category from "./Category";
 import { CATEGORIES } from "../api/constants";
 
@@ -12,19 +12,20 @@ export type Props = {
 const Categories: React.FC<Props> = ({ onSelectCategory, selected }) => {
 
     return (
-        <FlatList
-            data={CATEGORIES}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-                <Category
-                    id={item.id}
-                    icon={item.icon}
-                    selected={item.id == selected}
-                    onPress={() => onSelectCategory(item.id)}
-                />
-            )}
-            horizontal={true}
-        />
+        <View>
+            <FlatList
+                data={CATEGORIES}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                    <Category
+                        id={item.id}
+                        icon={item.icon}
+                        selected={item.id == selected}
+                        onPress={() => onSelectCategory(item.id)} />
+                )}
+                horizontal={true}
+            />
+        </View>
     );
 }
 
