@@ -65,19 +65,21 @@
 > **Chuck App** is a Joke App that displays the most current and random chuck norris jokes, and you may acquire a new joke or fact by pressing any category represented by corresponding icons on the main page. You may also find jokes by putting a phrase into the search box.
 
 ### Sneak peak
-
-<img alt="Screenshots" src="#">
-<p>Short description</p>
+<ul style="display: flex; gap:20px; justify-content: center; width: 100%">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-234919_jhtvnr.jpg" width="300">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477907/images/Screenshot_20220802-235036_cumf1k.jpg" width="300">
+<img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-235013_u8fvog.jpg" width="300">
+</ul>
 <p align="right"><a href="#top">⬆️</a></p>
 
 ### Built With
 
-<ul style="display: flex; gap: 6px; justify-content: center">
-<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-<img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"/>
-<img src="https://img.shields.io/badge/react-native-%2320232a.svg?style=for-the-badge&logo=react-native&logoColor=%2361DAFB"/>
-<img src="https://img.shields.io/badge/react-navigation-%2361DAFB.svg?style=for-the-badge&logo=react-navigation&logoColor=white"/>
-<img src="https://img.shields.io/badge/styled-%2338B2AC.svg?style=for-the-badge&logo=styled-components&logoColor=white"/>
+<ul style="display: flex;flex-direction: row; gap: 15px; justify-content: space-between">
+    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+    <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"/>
+    <img src="https://img.shields.io/badge/react-native-%2320232a.svg?style=for-the-badge&logo=react-native&logoColor=%2361DAFB"/>
+    <img src="https://img.shields.io/badge/react-navigation-%2361DAFB.svg?style=for-the-badge&logo=react-navigation&logoColor=white"/>
+    <img src="https://img.shields.io/badge/styled-%2338B2AC.svg?style=for-the-badge&logo=styled-components&logoColor=white"/>
 <br></br>
 </ul>
 
