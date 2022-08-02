@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
-
+import { STYLES } from "../styles";
 
 export type Props = {
     onPress: () => void;
@@ -39,26 +39,5 @@ const Buttons: React.FC<Props> = (({ onPress, icon, main }) => {
 
     );
 })
-
-
-
-const STYLES = StyleSheet.create({
-    button: {
-        aspectRatio: 1,
-        padding: 20,
-        borderRadius: 40,
-        justifyContent: 'center',
-        backgroundColor: '#20232c',
-        elevation: 10,
-    },
-    buttonMain: {
-        padding: 30,
-        borderRadius: 60,
-        aspectRatio: 1,
-        justifyContent: 'center',
-        backgroundColor: '#20232c',
-        elevation: 10
-    },
-});
 
 export default Buttons;

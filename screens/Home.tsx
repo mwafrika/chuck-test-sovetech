@@ -4,17 +4,13 @@ import {
     Alert,
     ActivityIndicator,
     Share,
-    StyleSheet,
     View,
     Text,
     SafeAreaView
 } from 'react-native';
-import styled from 'styled-components/native';
-
+import { HomeStyle, CategoryList } from "../styles";
 import { useNavigation } from '@react-navigation/native';
-
 import { LinearGradient } from 'expo-linear-gradient';
-
 import Repository from '../api/resources';
 import Categories from '../components/Categories';
 import Button from '../components/Button';
@@ -76,19 +72,19 @@ const HomeScreen = () => {
     const renderContent = () => {
         if (isLoading) {
             return (
-                <View style={STYLES.loading}>
+                <View style={HomeStyle.loading}>
                     <ActivityIndicator
                         size='large'
                         color='#fff'
                     />
-                    <Text style={STYLES.loadingText}>
+                    <Text style={HomeStyle.loadingText}>
                         Loading a joke from <Text style={{ fontWeight: 'bold' }}>{categorie}</Text>...
                     </Text>
                 </View>
             );
         } else {
             return (
-                <Text style={STYLES.text}>
+                <Text style={HomeStyle.text}>
                     {fact.value}
                 </Text>
             );
@@ -100,20 +96,20 @@ const HomeScreen = () => {
         <SafeAreaView style={{ flex: 1 }}>
             <LinearGradient
                 colors={['#383e4b', '#3d434f', '#383e4b']}
-                style={STYLES.container}>
+                style={HomeStyle.container}>
 
-                <Categoris>
+                <CategoryList>
                     <Categories
                         selected={categorie}
                         onSelectCategory={onSelectCategory}
                         main={false}
                     />
-                </Categoris>
+                </CategoryList>
 
-                <View style={STYLES.content}>
+                <View style={HomeStyle.content}>
                     {renderContent()}
                 </View>
-                <View style={STYLES.buttons}>
+                <View style={HomeStyle.buttons}>
                     <Button
                         icon='search'
                         onPress={() => navigate('search' as any)}
@@ -136,45 +132,3 @@ const HomeScreen = () => {
 
 export default HomeScreen;
 
-const STYLES = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    categories: {
-        flex: 1,
-    },
-    content: {
-        flex: 7,
-        justifyContent: 'center',
-        padding: 20,
-    },
-    loading: {
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    loadingText: {
-        padding: 20,
-        color: '#fff',
-        fontSize: 20,
-    },
-    text: {
-        color: '#fff',
-        textAlign: 'center',
-        fontSize: 24,
-    },
-    buttons: {
-        flex: 4,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-    },
-});
-
-
-
-const Categoris = styled.View`
-    flex: 1;
-    padding-top: 50px;
-    `;
