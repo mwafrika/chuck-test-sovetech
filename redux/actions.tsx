@@ -1,5 +1,6 @@
 import * as types from './types';
 import { ApiData } from '../api/resources';
+import { CATEGORIES } from '../api/constants';
 
 export const searchJoke = (query: string) => (dispatch: any) => {
     dispatch({ type: types.SEARCH_JOKE_REQUEST });
@@ -17,7 +18,13 @@ export const fetchCategories = () => (dispatch: any) => {
     dispatch({ type: types.FETCH_CATEGORIES_REQUEST });
     ApiData.getCategories()
         .then(response => {
-            dispatch({ type: types.FETCH_CATEGORIES_SUCCESS, payload: response });
+            const categories = Object.keys(response).map((key: any) => {
+                return {
+                    id: CATEGORIES[key].id,
+                    icon: CATEGORIES[key].icon
+                }
+            })
+            dispatch({ type: types.FETCH_CATEGORIES_SUCCESS, payload: categories });
         }
         )
         .catch(error => {
@@ -38,3 +45,4 @@ export const fetchRandomJoke = (category: string) => (dispatch: any) => {
         }
         );
 }
+

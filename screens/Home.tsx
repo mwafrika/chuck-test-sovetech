@@ -25,7 +25,7 @@ const HomeScreen = () => {
     const dispatch = useDispatch();
     const randomJoke = useSelector((state: any) => state.joke);
     console.log(randomJoke.randomJoke, "Check if it works");
-    console.log(randomJoke.loading, "Check for categories in component");
+    console.log(randomJoke.categories, "Check for categories in component");
     useEffect(() => {
         loadFact();
     }, [categorie]);
