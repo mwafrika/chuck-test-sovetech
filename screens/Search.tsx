@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/Feather';
-
+import { SearchScreenStyle } from "../styles";
 import Repository from '../api/resources';
 import Card from '../components/Card';
 
@@ -49,7 +49,7 @@ const SearchScreen = () => {
     const renderContent = () => {
         if (isLoading) {
             return (
-                <View style={STYLES.loading}>
+                <View style={SearchScreenStyle.loading}>
                     <ActivityIndicator
                         size='large'
                         color='#fff'
@@ -59,7 +59,7 @@ const SearchScreen = () => {
         } else if (results.total > 0) {
             return (
                 <FlatList
-                    style={STYLES.list}
+                    style={SearchScreenStyle.list}
                     data={results.result}
                     keyExtractor={(item, index) => item.id}
                     renderItem={renderItem}
@@ -67,10 +67,10 @@ const SearchScreen = () => {
             );
         } else {
             return (
-                <View style={STYLES.empty}>
+                <View style={SearchScreenStyle.empty}>
                     <Icon
                         name='search'
-                        style={STYLES.emptyIcon}
+                        style={SearchScreenStyle.emptyIcon}
                         size={60}
                     />
                 </View>
@@ -96,10 +96,10 @@ const SearchScreen = () => {
         <SafeAreaView style={{ flex: 1 }}>
             <LinearGradient
                 colors={['#383e4b', '#3d434f', '#383e4b']}
-                style={STYLES.container}>
-                <View style={STYLES.search}>
+                style={SearchScreenStyle.container}>
+                <View style={SearchScreenStyle.search}>
                     <TextInput
-                        style={STYLES.input}
+                        style={SearchScreenStyle.input}
                         placeholder='Search...'
                         value={query}
                         onChangeText={text => setQuery(text)}
@@ -114,38 +114,3 @@ const SearchScreen = () => {
 
 export default SearchScreen
 
-const STYLES = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    input: {
-        margin: 20,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        fontSize: 18,
-        color: '#333',
-    },
-    loading: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    empty: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    emptyIcon: {
-        color: '#fff'
-    },
-    list: {
-        paddingTop: 20,
-    },
-    search: {
-        backgroundColor: '#333',
-    }
-})

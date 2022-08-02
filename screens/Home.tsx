@@ -28,7 +28,6 @@ const HomeScreen = () => {
 
     useEffect(() => {
         loadFact();
-        console.log(categorie, "checke categories")
     }, [categorie]);
 
     const loadFact = () => {

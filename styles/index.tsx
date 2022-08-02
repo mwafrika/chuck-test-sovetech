@@ -24,6 +24,42 @@ export const STYLES = StyleSheet.create({
     },
 });
 
+export const SearchScreenStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    input: {
+        margin: 20,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        fontSize: 18,
+        color: '#333',
+    },
+    loading: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    empty: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    emptyIcon: {
+        color: '#fff'
+    },
+    list: {
+        paddingTop: 20,
+    },
+    search: {
+        backgroundColor: '#333',
+    }
+})
+
 // Cards style ==========================
 export const Cards = styled.View`
 margin: 20px;
