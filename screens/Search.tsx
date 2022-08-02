@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
     Alert,
     ActivityIndicator,
@@ -31,7 +31,6 @@ const SearchScreen = () => {
 
         try {
             dispatch(searchJoke(query) as any);
-            console.log('searchJoke', search.searchJoke.result);
         } catch (error) {
             Alert.alert('Oops! Something went wrong', 'Please try again');
         }
@@ -51,7 +50,7 @@ const SearchScreen = () => {
             return (
                 <FlatList
                     style={SearchScreenStyle.list}
-                    data={search.searchJoke.result}
+                    data={search?.searchJoke?.result}
                     keyExtractor={(item, index) => item.id}
                     renderItem={renderItem}
                 />

@@ -12,10 +12,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { HomeStyle, CategoryList } from "../styles";
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
-import Repository from '../api/resources';
 import Categories from '../components/Categories';
 import Button from '../components/Button';
-import { fetchRandomJoke, fetchCategories } from '../redux/actions';
+import { fetchRandomJoke } from '../redux/actions';
 
 const HomeScreen = () => {
 
@@ -28,7 +27,7 @@ const HomeScreen = () => {
     useEffect(() => {
         loadFact();
     }, [categorie]);
-
+    console.log(randomJoke?.randomJoke?.value, "Check undefienend value")
     const loadFact = () => {
         try {
             dispatch(fetchRandomJoke(categorie) as any);
@@ -48,7 +47,7 @@ const HomeScreen = () => {
         }
 
         const message = {
-            message: randomJoke.randomJoke.value,
+            message: randomJoke?.randomJoke?.value,
             url: randomJoke.randomJoke.url,
         }
 
@@ -75,7 +74,7 @@ const HomeScreen = () => {
         } else {
             return (
                 <Text style={HomeStyle.text}>
-                    {randomJoke.randomJoke.value}
+                    {randomJoke?.randomJoke?.value}
                 </Text>
             );
         }

@@ -27,6 +27,7 @@ export const STYLES = StyleSheet.create({
 export const SearchScreenStyle = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: 20,
     },
     input: {
         margin: 20,
