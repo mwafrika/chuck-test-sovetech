@@ -9,6 +9,12 @@ const initialState = {
 
 const reducer = (state = initialState, action: any) => {
     switch (action.type) {
+        case types.FETCH_CATEGORIES_REQUEST:
+            return {
+                ...state,
+                loading: true,
+                error: null,
+            }
         case types.FETCH_CATEGORIES_SUCCESS:
             return {
                 ...state,
@@ -22,6 +28,12 @@ const reducer = (state = initialState, action: any) => {
                 loading: false,
                 error: action.payload,
             }
+        case types.FETCH_RANDOM_JOKE_REQUEST:
+            return {
+                ...state,
+                loading: true,
+                error: null,
+            }
         case types.FETCH_RANDOM_JOKE_SUCCESS:
             return {
                 ...state,
@@ -34,6 +46,12 @@ const reducer = (state = initialState, action: any) => {
                 ...state,
                 loading: false,
                 error: action.payload,
+            }
+        case types.SEARCH_JOKE_REQUEST:
+            return {
+                ...state,
+                loading: true,
+                error: null,
             }
         case types.SEARCH_JOKE_SUCCESS:
             return {

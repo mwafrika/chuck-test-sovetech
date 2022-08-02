@@ -15,7 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Repository from '../api/resources';
 import Categories from '../components/Categories';
 import Button from '../components/Button';
-import { fetchRandomJoke } from '../redux/actions';
+import { fetchRandomJoke, fetchCategories } from '../redux/actions';
 
 const HomeScreen = () => {
 
@@ -25,7 +25,7 @@ const HomeScreen = () => {
     const dispatch = useDispatch();
     const randomJoke = useSelector((state: any) => state.joke);
     console.log(randomJoke.randomJoke, "Check if it works");
-    console.log(randomJoke.loading, "Check if it works");
+    console.log(randomJoke.loading, "Check for categories in component");
     useEffect(() => {
         loadFact();
     }, [categorie]);
@@ -33,6 +33,7 @@ const HomeScreen = () => {
     const loadFact = () => {
         try {
             dispatch(fetchRandomJoke(categorie) as any);
+            dispatch(fetchCategories() as any);
         } catch (e) {
             Alert.alert('Oops! Something went wrong', 'Please try again');
         }

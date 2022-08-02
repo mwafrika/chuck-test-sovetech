@@ -11,6 +11,7 @@ export const ApiData = {
         try {
             const response = await fetch(URLS.CATEGORIES);
             const categories = await response.json();
+            console.log(categories, "Check categories exist");
             return categories.sort();
         } catch (error) {
             return console.error(error);
