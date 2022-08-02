@@ -5,7 +5,8 @@ import HomeScreen from './screens/Home';
 import SearchScreen from './screens/Search';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
 const RootStack = createStackNavigator();
 
 const Stack = () => {
@@ -21,9 +22,11 @@ const Stack = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
