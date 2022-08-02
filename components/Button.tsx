@@ -25,15 +25,18 @@ const Buttons: React.FC<Props> = (({ onPress, icon, main }) => {
     }, [main]);
 
     return (
-        <TouchableOpacity
-            style={styles}
-            onPress={onPress}>
-            <Icon
-                name={icon}
-                size={size}
-                color="#fff"
-            />
-        </TouchableOpacity>
+        <>
+            <TouchableOpacity
+                style={styles}
+                onPress={onPress}>
+                <Icon
+                    name={icon}
+                    size={size}
+                    color="#fff"
+                />
+            </TouchableOpacity>
+        </>
+
     );
 })
 
