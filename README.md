@@ -18,7 +18,8 @@
   </a>
   <p align="center">
     <br />
-    <a href="#"><strong>Explore the App »</strong></a>
+    <a href="https://res.cloudinary.com/ujuzi/video/upload/v1659475337/videos/XRecorder_Edited_02082022_225850_r5ujnr.mp4"
+    target="_blank"><strong>Explore the App »</strong></a>
     <br />
     <br />
     <a href="https://res.cloudinary.com/ujuzi/video/upload/v1659475337/videos/XRecorder_Edited_02082022_225850_r5ujnr.mp4">View Demo</a>
