@@ -9,19 +9,18 @@ import {
     TextInput,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/Feather';
 import { SearchScreenStyle } from "../styles";
-import Repository from '../api/resources';
+import { searchJoke } from '../redux/actions';
 import Card from '../components/Card';
 
 const SearchScreen = () => {
-
-    const [isLoading, setIsLoading] = useState(false);
     const [query, setQuery] = useState('');
-    const [results, setResults] = useState({
-        total: 0,
-        result: [],
-    });
+
+    const dispatch = useDispatch();
+    const search = useSelector((state: any) => state.joke);
+    const loading = useSelector((state: any) => state.joke.loading);
 
     const handleOnSubmitEditing = () => {
 
@@ -30,22 +29,16 @@ const SearchScreen = () => {
             return;
         }
 
-        setIsLoading(true);
-
-        Repository.findFacts(query)
-            .then(results => {
-                setIsLoading(false);
-                setResults(results);
-            }
-            )
-            .catch(e => {
-                Alert.alert('Oops! Something went wrong', 'Please try again');
-            }
-            );
+        try {
+            dispatch(searchJoke(query) as any);
+            console.log('searchJoke', search.searchJoke.result);
+        } catch (error) {
+            Alert.alert('Oops! Something went wrong', 'Please try again');
+        }
     }
 
     const renderContent = () => {
-        if (isLoading) {
+        if (loading) {
             return (
                 <View style={SearchScreenStyle.loading}>
                     <ActivityIndicator
@@ -54,11 +47,11 @@ const SearchScreen = () => {
                     />
                 </View>
             );
-        } else if (results.total > 0) {
+        } else if (search.searchJoke.total > 0) {
             return (
                 <FlatList
                     style={SearchScreenStyle.list}
-                    data={results.result}
+                    data={search.searchJoke.result}
                     keyExtractor={(item, index) => item.id}
                     renderItem={renderItem}
                 />
