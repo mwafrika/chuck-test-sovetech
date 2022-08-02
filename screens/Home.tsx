@@ -27,7 +27,7 @@ const HomeScreen = () => {
     useEffect(() => {
         loadFact();
     }, [categorie]);
-    console.log(randomJoke?.randomJoke?.value, "Check undefienend value")
+
     const loadFact = () => {
         try {
             dispatch(fetchRandomJoke(categorie) as any);

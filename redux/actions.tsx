@@ -1,6 +1,6 @@
 import * as types from './types';
-import { ApiData } from '../api/resources';
-import { CATEGORIES } from '../api/constants';
+import { ApiData } from './api/resources';
+import { CATEGORIES } from './api/constants';
 
 export const searchJoke = (query: string) => (dispatch: any) => {
     dispatch({ type: types.SEARCH_JOKE_REQUEST });
