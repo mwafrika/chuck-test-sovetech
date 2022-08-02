@@ -6,7 +6,7 @@ const URLS = {
     SEARCH: 'https://api.chucknorris.io/jokes/search?query={query}',
 };
 
-const ApiData = {
+export const ApiData = {
     async getCategories() {
         try {
             const response = await fetch(URLS.CATEGORIES);

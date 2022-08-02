@@ -5,9 +5,7 @@ import {
     ActivityIndicator,
     FlatList,
     View,
-    StyleSheet,
     SafeAreaView,
-    Text,
     TextInput,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -28,7 +26,7 @@ const SearchScreen = () => {
     const handleOnSubmitEditing = () => {
 
         if (query.length < 4) {
-            Alert.alert('Query string is too short (< 4)')
+            Alert.alert('The entered value is less than 4 characters');
             return;
         }
 
