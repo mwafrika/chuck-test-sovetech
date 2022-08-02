@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { FlatList, View } from "react-native";
 import Category from "./Category";
-import { CATEGORIES } from "../api/constants";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCategories } from '../redux/actions';
 
 
 export type Props = {
@@ -11,9 +13,16 @@ export type Props = {
 }
 const Categories: React.FC<Props> = ({ onSelectCategory, selected }) => {
 
+    const dispatch = useDispatch();
+    const { categories } = useSelector((state: any) => state.joke);
+
+    useEffect(() => {
+        dispatch(fetchCategories() as any);
+    }, [])
+
     return (
         <FlatList
-            data={CATEGORIES}
+            data={categories}
             keyExtractor={(item) => item.id}
             style={{ flex: 1 }}
             renderItem={({ item }) => (
