@@ -65,6 +65,17 @@
 > **Chuck App** is a Joke App that displays the most current and random chuck norris jokes, and you may acquire a new joke or fact by pressing any category represented by corresponding icons on the main page. You may also find jokes by putting a phrase into the search box.
 
 ### Sneak peak
+1. To the first screen, The list of categories are represented by icons and can they can be found the the top of the screen.
+2. The random default joke is displayed to the screen.
+3. When the first ``` Search ``` is clicked, We should be redirected to the search screen that has the search box to search any Joke.
+4. When we click to the second icon ``` Generate joke ```, A new joke should be displayed to the screen.
+5. When the last icon ``` Share with others ``` is clicked, You will be able to share a joke with your freinds on any available app in your phone 
+6. When searching for a joke you, You need to enter a word having more than 3 characters, If a less than 4 characters is enetered an alert popup.
+7. For more information you can check the link for the video here: <a href="https://res.cloudinary.com/ujuzi/video/upload/v1659475337/videos/XRecorder_Edited_02082022_225850_r5ujnr.mp4"
+    target="_blank"><strong>Explore the App »</strong></a>
+8. Enjoy!
+<br></br>
+<br></br>
 <ul style="display: flex; gap:6px; justify-content: center; width: 100%">
 <img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477908/images/Screenshot_20220802-234919_jhtvnr.jpg" width="250">
 <img alt="Screenshots" src="https://res.cloudinary.com/ujuzi/image/upload/v1659477907/images/Screenshot_20220802-235036_cumf1k.jpg" width="250">
